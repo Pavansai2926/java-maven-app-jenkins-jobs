@@ -35,6 +35,13 @@ pipeline {
                 }
             }
         }
+        stage("imagebuild") {
+            steps {
+                script {
+                    gv.buildImage()
+                }
+            }
+        }
         stage("deploy") {
             steps {
                 script {
